@@ -18,7 +18,9 @@ Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e inc
  * @param {object} array di oggeti per creare le card
  */
 function createPosts(array){
+    let Post_piaciuti = []
     array.forEach((element) => {
+        console.log(element);
         let post = document.querySelector('.container')
         let div = document.createElement('div')
         let pfp = document.createElement('div')
@@ -45,11 +47,14 @@ function createPosts(array){
             const check = classe_da_modificare.toggle('active')
             if(check){
                 likes.innerHTML = `Piace a ${element.numero_likes + 1} persone`
+                Post_piaciuti.push(element)
             }else{
                 likes.innerHTML = `Piace a ${element.numero_likes} persone`
+                Post_piaciuti.splice(element)
             }
         })
     })
+    return Post_piaciuti
 }
 
 const posts = 
@@ -71,7 +76,29 @@ const posts =
         testo_post: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum assumenda corrupti facilis sapiente soluta veritatis asperiores itaque, sequi distinctio culpa!',
         immagine: './assets/img/post-img-2.jpg',
         numero_likes: 173
+    },
+    {
+        id: 3,
+        nome_autore: 'Laura Pascal',
+        foto_autore: './assets/img/post-img-1.jpg',
+        data: '08/15/2020',
+        testo_post: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum assumenda corrupti facilis sapiente soluta veritatis asperiores itaque, sequi distinctio culpa!',
+        immagine: './assets/img/pfp-2.jpg',
+        numero_likes: 128
+    },
+    {
+        id: 4,
+        nome_autore: 'Laura Pascal',
+        foto_autore: './assets/img/post-img-2.jpg',
+        data: '08/15/2020',
+        testo_post: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum assumenda corrupti facilis sapiente soluta veritatis asperiores itaque, sequi distinctio culpa!',
+        immagine: './assets/img/pfp-1.jpg',
+        numero_likes: 53
     }
 ]
 
-createPosts(posts);
+let post_piaciuti = []
+
+post_piaciuti = createPosts(posts);
+
+console.log(post_piaciuti);
