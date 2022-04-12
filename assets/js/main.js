@@ -23,16 +23,16 @@ function createPosts(array){
         let div = document.createElement('div')
         let pfp = document.createElement('div')
         let author = document.createElement('div')
-        let date = document.createElement('div')
         let post_text = document.createElement('div')
+        let post_img = document.createElement('div')
         div.classList.add('card')
         pfp.classList.add('profile_picture')
         pfp.innerHTML = `<img src="${element.foto_autore}" alt="">`
         author.classList.add('autore')
         author.innerHTML = `${element.nome_autore} <br> ${element.data}`
         post_text.innerHTML = `${element.testo_post}`
-        
-        div.append(pfp, author, date, post_text)
+        post_img.innerHTML =`<img src="${element.immagine}" width="100%">`
+        div.append(pfp, author, post_text, post_img)
         post.append(div)
     })
 }

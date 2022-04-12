@@ -20,6 +20,7 @@ body > h1{
     background-color: white;
     display: flex;
     flex-wrap: wrap;
+    row-gap: 10px
 }
 .profile_picture{
     width: calc(100% / 10);
