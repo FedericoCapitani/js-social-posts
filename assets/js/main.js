@@ -25,6 +25,8 @@ function createPosts(array){
         let author = document.createElement('div')
         let post_text = document.createElement('div')
         let post_img = document.createElement('div')
+        let mi_piace = document.createElement('div')
+        let likes = document.createElement('div')
         div.classList.add('card')
         pfp.classList.add('profile_picture')
         pfp.innerHTML = `<img src="${element.foto_autore}" alt="">`
@@ -32,7 +34,11 @@ function createPosts(array){
         author.innerHTML = `${element.nome_autore} <br> ${element.data}`
         post_text.innerHTML = `${element.testo_post}`
         post_img.innerHTML =`<img src="${element.immagine}" width="100%">`
-        div.append(pfp, author, post_text, post_img)
+        mi_piace.classList.add('like')
+        mi_piace.innerHTML = 'Mi piace'
+        likes.classList.add('like')
+        likes.innerHTML = `Piace a ${element.numero_likes} persone`
+        div.append(pfp, author, post_text, post_img, mi_piace, likes)
         post.append(div)
     })
 }
