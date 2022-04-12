@@ -12,6 +12,9 @@ body > h1{
     text-align: center;
     margin: 1rem;
 }
+div{
+    font-size: 1.2rem;
+}
 
 .card{
     max-width: 800px;
@@ -39,6 +42,9 @@ body > h1{
     width: 50%;
     height: 50px;
     line-height: 50px;
-    font-size: 1.4rem;
     text-align: center;
+    font-size: 1.5rem;
+}
+.active{
+    color: blue;
 }

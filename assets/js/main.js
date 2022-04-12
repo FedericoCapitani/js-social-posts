@@ -35,11 +35,20 @@ function createPosts(array){
         post_text.innerHTML = `${element.testo_post}`
         post_img.innerHTML =`<img src="${element.immagine}" width="100%">`
         mi_piace.classList.add('like')
-        mi_piace.innerHTML = 'Mi piace'
+        mi_piace.innerHTML = '<i class="fa-solid fa-thumbs-up"></i> Mi piace'
         likes.classList.add('like')
         likes.innerHTML = `Piace a ${element.numero_likes} persone`
         div.append(pfp, author, post_text, post_img, mi_piace, likes)
         post.append(div)
+        mi_piace.addEventListener('click', function(){
+            const classe_da_modificare = this.classList
+            const check = classe_da_modificare.toggle('active')
+            if(check){
+                likes.innerHTML = `Piace a ${element.numero_likes + 1} persone`
+            }else{
+                likes.innerHTML = `Piace a ${element.numero_likes} persone`
+            }
+        })
     })
 }
 
