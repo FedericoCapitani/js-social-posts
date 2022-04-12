@@ -8,6 +8,14 @@ testo del post,
 immagine (non tutti i post devono avere una immagine),
 numero di likes. */
 
+/* Milestone 2
+Prendendo come riferimento il layout di esempio presente nell'html, stampiamo i post del nostro feed. */
+
+/* Milestone 3
+Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e incrementiamo il counter dei likes relativo. Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like. */
+
+
+
 const posts = 
 [
     {
@@ -15,8 +23,8 @@ const posts =
         nome_autore: 'Marco Rossi',
         foto_autore: '',
         data: '06/23/2021',
-        testo_post: '',
-        immagine: '',
+        testo_post: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum assumenda corrupti facilis sapiente soluta veritatis asperiores itaque, sequi distinctio culpa!',
+        immagine: 'https://picsum.photos/200',
         numero_likes: 67
     },
     {
@@ -24,8 +32,8 @@ const posts =
         nome_autore: 'Laura Pascal',
         foto_autore: '',
         data: '08/15/2020',
-        testo_post: '',
-        immagine: '',
+        testo_post: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum assumenda corrupti facilis sapiente soluta veritatis asperiores itaque, sequi distinctio culpa!',
+        immagine: 'https://picsum.photos/200',
         numero_likes: 245
     },
     {
@@ -33,17 +41,9 @@ const posts =
         nome_autore: 'Sara Violini',
         foto_autore: '',
         data: '02/01/2022',
-        testo_post: '',
-        immagine: '',
+        testo_post: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum assumenda corrupti facilis sapiente soluta veritatis asperiores itaque, sequi distinctio culpa!',
+        immagine: 'https://picsum.photos/200',
         numero_likes: 173
-    },
-    {
-        id: 4,
-        nome_autore: 'Luca Marini',
-        foto_autore: '',
-        data: '11/27/2021',
-        testo_post: '',
-        immagine: '',
-        numero_likes: 104
-    },
+    }
 ]
+
