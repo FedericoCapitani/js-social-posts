@@ -12,3 +12,31 @@ body > h1{
     text-align: center;
     margin: 1rem;
 }
+
+.card{
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.profile_picture{
+    width: calc(100% / 10);
+}
+.profile_picture > img{
+    border-radius: 50%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+.autore{
+    width: 87%;
+    margin-left: 3%;
+    align-self: center;
+}
+.mi_piace{
+    width: 50%;
+}
+.likes{
+    width: 50%;
+}
